@@ -66,7 +66,7 @@ auth.onAuthStateChanged(user => {
             .onSnapshot(querySnapshot => {
 
                 // Map results to an array of li elements
-                let items = querySnapshot.docs.map(doc => {
+                const items = querySnapshot.docs.map(doc => {
                     return `<li>${doc.data().name}</li>`
                 });
                 thingsList.innerHTML = items.join('');
